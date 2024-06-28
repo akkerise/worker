@@ -1,0 +1,16 @@
+{
+  "name": "resize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "resize-main.js",
+  "scripts": {
+    "test": "node resize-main.js"
+  },
+  "author": "thanhna",
+  "license": "ISC",
+  "dependencies": {
+    "fluent-ffmpeg": "^2.1.3",
+    "node-worker-threads-pool": "^1.5.1",
+    "sharp": "^0.33.4"
+  }
+}
