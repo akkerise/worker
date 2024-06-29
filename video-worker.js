@@ -11,7 +11,6 @@ const resizeVideo = (src, size) => {
 };
 
 parentPort.on("message", msg => {
-  console.log('msg', msg)
   console.log(`Start at ${new Date().getTime()}`);
   const { file, size } = msg;
   const [filename, ext] = file.split(".")[0];

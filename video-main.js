@@ -10,8 +10,10 @@ const videoTargetSize = process.argv[3];
 
 const resize = async () => {
   await pool.exec({ file: videoToResize, size: videoTargetSize })
-    .then(() => {
-      if (msg?.type === "done") {
+    .then((msg) => {
+      console.log("🚀 ~ .then ~ msg:", msg)
+      if (msg && msg?.type === "done") {
+        console.log(`End at ${new Date().getTime()}`);
         console.log(`Saved ${videoToResize} to ${msg.output}`);
         console.log(`Finished at ${new Date().getTime()}`);
       }
